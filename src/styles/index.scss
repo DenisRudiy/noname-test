@@ -1,6 +1,5 @@
 // @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import '/src/styles/utils/style.scss';
-
+@import "/src/styles/utils/style.scss";
 
 @tailwind base;
 @tailwind components;
@@ -27,15 +26,6 @@ body {
   color: rgb(255, 255, 255);
   overflow-y: scroll;
   overflow-x: hidden !important;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
 
   background: rgb(115, 25, 74);
   background: linear-gradient(
@@ -49,8 +39,13 @@ body {
   animation: gradient 2s ease infinite;
 }
 
-::-webkit-scrollbar {
-  display: none;
+*::-webkit-scrollbar {
+  width: 0.65rem;
+  background-color: #7b7b7b;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: $radiusSmall;
+  background-color: #d8d8d8;
 }
 
 @keyframes gradient {
