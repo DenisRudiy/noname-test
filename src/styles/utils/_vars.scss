@@ -1,0 +1,32 @@
+$ff-second: 'Montserrat Alternates', sans-serif;
+$ff: 'Angry', sans-serif;
+
+$primaryPurp: #4d09d4;
+$primaryBlue: #4e54ff;
+$primaryTurq: #18e9e1;
+$white: #FFFFFF;
+$black: rgba(14, 15, 14, .5);
+$blackDark: rgba(14, 15, 14, 0.835);
+$bg: #101415;
+$gradBlack: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+$gradBlue: linear-gradient(90deg, rgba(0,8,20,1) 0%, rgba(67,109,183,1) 50%, rgba(0,8,20,1) 100%);
+$gradPurp: linear-gradient(90deg, rgba(10,0,20,1) 0%, rgba(133,67,183,1) 50%, rgba(10,0,20,1) 100%);
+$gradTurquoise: linear-gradient(90deg, rgba(0,20,19,1) 0%, rgba(0,179,172,1) 50%, rgba(0,20,19,1) 100%);
+$grad1: linear-gradient(0deg, rgba(171,0,255,1) 0%, rgba(0,255,245,1) 100%);
+$grad2: linear-gradient(0deg, rgba(255,234,0,1) 0%, rgba(255,0,109,1) 100%);
+$grad3: linear-gradient(0deg, rgba(216,255,0,1) 0%, rgba(0,173,255,1) 100%);
+$grad4: linear-gradient(0deg, rgba(255,0,220,1) 0%, rgba(79,255,0,1) 100%);
+
+
+$radiusSmall: 8rem;
+$radius: 12rem;
+$radiusRound: 16rem;
+
+$shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+$transition: .2s all ease-in-out;
+
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
