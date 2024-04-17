@@ -1,16 +1,24 @@
 $ff-second: 'Montserrat Alternates', sans-serif;
 $ff: 'Angry', sans-serif;
 
-$primaryPurp: #4d09d4;
-$primaryBlue: #4e54ff;
-$primaryTurq: #18e9e1;
+$black: #05010d;
 $white: #FFFFFF;
-$black: rgba(14, 15, 14, .5);
-$blackDark: rgba(14, 15, 14, 0.835);
-$bg: #101415;
+$grey: rgb(196, 196, 196);
+$primary: #cc1978;
+$purp: #751bc3;
+$line: #222028;
+$darkGrey: #0b0815;
+$gradPink: linear-gradient(
+    45deg,
+    rgba(115, 25, 74, 1) 2%,
+    rgba(5, 1, 13, 1) 31%,
+    rgba(64, 7, 37, 1) 70%,
+    rgba(37, 1, 21, 1) 90%
+);
+$bg: rgb(115, 25, 74);
 $gradBlack: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
 $gradBlue: linear-gradient(90deg, rgba(0,8,20,1) 0%, rgba(67,109,183,1) 50%, rgba(0,8,20,1) 100%);
-$gradPurp: linear-gradient(90deg, rgba(10,0,20,1) 0%, rgba(133,67,183,1) 50%, rgba(10,0,20,1) 100%);
+
 $gradTurquoise: linear-gradient(90deg, rgba(0,20,19,1) 0%, rgba(0,179,172,1) 50%, rgba(0,20,19,1) 100%);
 $grad1: linear-gradient(0deg, rgba(171,0,255,1) 0%, rgba(0,255,245,1) 100%);
 $grad2: linear-gradient(0deg, rgba(255,234,0,1) 0%, rgba(255,0,109,1) 100%);
@@ -22,7 +30,9 @@ $radiusSmall: 8rem;
 $radius: 12rem;
 $radiusRound: 16rem;
 
-$shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+// $shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+$shadow: 0px 0px 500px 250px rgba(89, 23, 147, 0.4), -100px -100px 250px 100px rgba(204, 25, 120, 0.7),
+-100px 100px 500px 250px rgba(80, 30, 40, 0.7), 50px -50px 500px 250px rgba(59, 25, 170, 0.7);
 
 $transition: .2s all ease-in-out;
 

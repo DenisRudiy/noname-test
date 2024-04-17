@@ -1,11 +1,14 @@
 @import url("./index.scss");
+@import "/src/styles/utils/style.scss";
 
 .Header {
+
   .Modal {
     position: fixed;
     opacity: 0;
     transition: 0.6s all;
     z-index: 2000 !important;
+
     .Header_modal {
       position: fixed;
       height: 120vh;
@@ -15,30 +18,36 @@
       border-left: 2px solid var(--white);
       z-index: 2000;
       animation: borderGlow 2s infinite;
+
       .Header_modal_close {
         @apply flex justify-start items-start;
         padding: 20px;
         width: 100%;
+
         .Header_modal_close_btn {
           @apply flex justify-center items-center;
           width: 45px;
           height: 45px;
           border-radius: 50%;
           transition: 0.5s all;
+
           &:hover {
             color: var(--white);
             background-color: var(--pink);
             box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
             border-color: var(--pink);
           }
+
           &:active {
             transform: translateY(15px);
           }
         }
       }
+
       .Header_modal_btn {
         @apply flex justify-center items-center gap-5 flex-col;
         margin-top: 50px;
+
         .Header_nav_item {
           @apply flex justify-center items-center cursor-pointer;
           width: 50%;
@@ -55,12 +64,14 @@
             border-color: var(--pink);
             width: 80%;
           }
+
           &:active {
             transform: translateY(15px);
           }
         }
       }
     }
+
     .Header_overlay {
       position: fixed;
       width: 100vw;
@@ -71,6 +82,7 @@
       z-index: 1999;
     }
   }
+
   .Header_burger {
     @apply flex justify-between items-end gap-10 fixed;
     width: 100vw;
@@ -78,6 +90,7 @@
     padding: 20px 40px;
     background-color: var(--black);
     z-index: 1500;
+
     .Header_logo_section {
       @apply flex justify-center items-center;
       width: 200px;
@@ -86,28 +99,33 @@
         width: 60px;
         height: 60px;
       }
+
       .Header_logo_title {
         text-transform: uppercase;
         font-weight: 800;
       }
     }
+
     .Header_burger_btn {
       @apply flex justify-center items-center;
       width: 45px;
       height: 45px;
       border-radius: 50%;
       transition: 0.5s all;
+
       &:hover {
         color: var(--white);
         background-color: var(--pink);
         box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
         border-color: var(--pink);
       }
+
       &:active {
         transform: translateY(15px);
       }
     }
   }
+
   .Header_body {
     @apply flex justify-center items-center gap-10 fixed;
     width: 100vw;
@@ -115,6 +133,7 @@
     padding: 20px 0px;
     background-color: var(--black);
     z-index: 1500;
+
     .Header_logo_section {
       @apply flex justify-center items-center;
       width: 200px;
@@ -123,11 +142,13 @@
         width: 60px;
         height: 60px;
       }
+
       .Header_logo_title {
         text-transform: uppercase;
         font-weight: 800;
       }
     }
+
     .Header_nav_section {
       @apply flex justify-center items-center;
       width: 800px;
@@ -151,15 +172,18 @@
             border-color: var(--pink);
             width: 120px;
           }
+
           &:active {
             transform: translateY(15px);
           }
         }
       }
     }
+
     .Header_contacts_section {
       @apply flex justify-center items-center;
       width: 250px;
+
       .Header_contacts {
         @apply flex justify-center items-center gap-6;
 
@@ -181,6 +205,7 @@
             position: absolute;
             z-index: -1;
           }
+
           &:after {
             height: 0;
             width: 100%;
@@ -188,8 +213,10 @@
             background: var(--pink);
             transition: 0.5s;
           }
+
           &.--shine {
             overflow: hidden;
+
             &:after {
               height: 100%;
               width: 0;
@@ -200,9 +227,11 @@
               transform-origin: top left;
               transition: 0.5s;
             }
+
             &:hover {
               box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
               color: var(--white);
+
               &:after {
                 width: 125%;
               }
@@ -213,13 +242,13 @@
             transform: translateY(15px);
           }
         }
-        .Header_language {
-          @apply flex justify-center items-center p-2 cursor-pointer gap-1;
-          .Header_language_img {
-            width: 15px;
-            height: 15px;
-          }
-        }
+        // .Header_language {
+        //   @apply flex justify-center items-center p-2 cursor-pointer gap-1;
+        //   .Header_language_img {
+        //     width: 15px;
+        //     height: 15px;
+        //   }
+        // }
       }
     }
   }
@@ -230,3 +259,240 @@
 .Modal.animate_out {
   opacity: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+// }
+// .Modal {
+//     position: fixed;
+//     opacity: 0;
+//     transition: 0.6s all;
+//     z-index: 2000 !important;
+//  }
+// .header-modal {
+//   position: fixed;
+//   height: 120vh;
+//   width: 350px;
+//   right: 0;
+//   background-color: var(--black);
+//   border-left: 2px solid var(--white);
+//   z-index: 2000;
+//   animation: borderGlow 2s infinite;
+
+// 		&__close {
+//       @apply flex justify-start items-start;
+//       padding: 20px;
+//       width: 100%;
+// 		}
+
+// 		&__close-btn {
+//       @apply flex justify-center items-center;
+//       width: 45px;
+//       height: 45px;
+//       border-radius: 50%;
+//       transition: 0.5s all;
+//       &:hover {
+//         color: var(--white);
+//         background-color: var(--pink);
+//         box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
+//         border-color: var(--pink);
+//       }
+//       &:active {
+//         transform: translateY(15px);
+//       }
+// 		}
+
+// 		&__nav {
+//       @apply flex justify-center items-center gap-5 flex-col;
+//       margin-top: 50px;
+// 		}
+// }
+// .header-nav {
+//   @apply flex justify-center items-center gap-5;
+
+// 		&__item {
+//       @apply flex justify-center items-center cursor-pointer;
+//       width: 50%;
+//       height: 40px;
+//       border: 2px solid transparent;
+//       color: var(--grey);
+//       border-radius: 10px;
+//       transition: 0.5s all;
+
+//       &:hover {
+//         color: var(--white);
+//         background-color: var(--pink);
+//         box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
+//         border-color: var(--pink);
+//         width: 80%;
+//       }
+//       &:active {
+//         transform: translateY(15px);
+//       }
+//       &_web {
+//         // @apply flex justify-center items-center cursor-pointer;
+//         width: 80px;
+//         // height: 40px;
+//         // border: 2px solid transparent;
+//         // color: var(--grey);
+//         // border-radius: 10px;
+//         // transition: 0.5s all;
+
+//         &:hover {
+//           // color: var(--white);
+//           // background-color: var(--pink);
+//           // box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
+//           // border-color: var(--pink);
+//           width: 120px;
+//         }
+//         // &:active {
+//         //   // transform: translateY(15px);
+//         // }
+//       }
+// 		}
+
+// 		&__section {
+//       @apply flex justify-center items-center;
+//       width: 800px;
+// 		}
+// }
+// .header-overlay {
+//   position: fixed;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: var(--black);
+//   backdrop-filter: blur(50px);
+//   opacity: 0.6;
+//   z-index: 1999;
+// }
+// .header-burger {
+//   @apply flex justify-between items-end gap-10 fixed;
+//   width: 100vw;
+//   color: var(--white);
+//   padding: 20px 40px;
+//   background-color: var(--black);
+//   z-index: 1500;
+
+// 		&__btn {
+//       @apply flex justify-center items-center;
+//       width: 45px;
+//       height: 45px;
+//       border-radius: 50%;
+//       transition: 0.5s all;
+//       &:hover {
+//         color: var(--white);
+//         background-color: var(--pink);
+//         box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
+//         border-color: var(--pink);
+//       }
+//       &:active {
+//         transform: translateY(15px);
+//       }
+// 		}
+// }
+// .header-logo {
+
+// 		&__section {
+//       @apply flex justify-center items-center;
+//       width: 200px;
+// 		}
+
+// 		&__img {
+//       width: 60px;
+//       height: 60px;
+// 		}
+
+// 		&__title {
+//       // @include text($ff, 500, 14px, 150%, null)
+//       text-transform: uppercase;
+//       font-weight: 800;
+// 		}
+// }
+// .header-body {
+//   @apply flex justify-center items-center gap-10 fixed;
+//   width: 100vw;
+//   color: var(--white);
+//   padding: 20px 0px;
+//   background-color: var(--black);
+//   z-index: 1500;
+// }
+// .header-contacts {
+//   @apply flex justify-center items-center;
+//   width: 250px;
+
+// 		&__btn {
+//       @apply flex justify-center items-center gap-6;
+// 		}
+//     // &__shine
+// }
+// .header-feedback {
+//   @apply flex justify-center items-center p-2 cursor-pointer;
+//   background-color: var(--white);
+//   color: var(--black);
+//   border-radius: 10px;
+//   height: 40px;
+//   width: 160px;
+//   transition: 0.5s all;
+//   position: relative;
+//   text-decoration: none;
+//   z-index: 1;
+
+//   &:before,
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//   }
+//   &:after {
+//     height: 0;
+//     width: 100%;
+//     left: 0;
+//     background: var(--pink);
+//     transition: 0.5s;
+//   }
+
+//   &__shine {
+//     overflow: hidden;
+//     &:after {
+//       height: 100%;
+//       width: 0;
+//       left: -29%;
+//       top: 0;
+//       background: var(--pink);
+//       transform: skew(50deg);
+//       transform-origin: top left;
+//       transition: 0.5s;
+//     }
+//     &:hover {
+//       box-shadow: 0 0 5px var(--pink), 0 0 25px var(--pink);
+//       color: var(--white);
+//       &:after {
+//         width: 125%;
+//       }
+//     }
+//   }
+//   &:active {
+//     transform: translateY(15px);
+//   }
+// }
+// .Modal.animate_in {
+//   opacity: 1;
+// }
+// .Modal.animate_out {
+//   opacity: 0;
+// }

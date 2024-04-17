@@ -1,7 +1,10 @@
 @import url("./index.scss");
+@import "/src/styles/utils/style.scss";
 
 .Layout {
-  @apply flex justify-center items-center relative;
+  @include flex-center;
+  @apply relative;
+  // @apply flex justify-center items-center relative;
   flex-direction: column;
 
   .Layout_body {
@@ -9,12 +12,13 @@
     height: auto;
     width: 100vw;
     .Layout_line {
-      @apply flex justify-center items-center;
+      @include flex-center;
+      // @apply flex justify-center items-center;
       flex-direction: column;
       margin: 0px 50px;
       .line {
         width: 1px;
-        background-color: var(--line);
+        background-color: $line;
       }
       svg {
         z-index: 1400;
@@ -24,7 +28,7 @@
 
   .Layout_underline {
     height: 1px;
-    background-color: var(--line);
+    background-color: $line;
     width: calc(100vw - 100px);
     z-index: 1000;
     margin-top: -6px;

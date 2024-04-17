@@ -2,25 +2,29 @@
 @import '/src/styles/utils/style.scss';
 
 .Main {
-  @apply flex justify-center items-center;
+  @include flex-center;
+  // @apply flex justify-center items-center;
   width: 100vw;
 
-  .Main_images {
-    @apply flex justify-center items-center;
+  &_images {
+    @include flex-center;
+    // @apply flex justify-center items-center;
     flex-direction: column;
     height: 1100px;
     padding-top: 120px;
     .Main_code_image {
       z-index: 1000;
       transform: translateY(300px);
-      transition: 0.5s all;
+      // transition: 0.5s all;
+      transition: $transition;
     }
     .Main_lights {
       @apply absolute;
       z-index: 500;
       width: 50vw;
       opacity: 0.3;
-      transition: 0.5s all;
+      transition: $transition;
+      // transition: 0.5s all;
       animation: rotate 7s linear infinite;
     }
     .Main_circle {
@@ -30,9 +34,10 @@
       height: 1px;
       border-radius: 50%;
       margin-top: 60px;
-      background-color: #751bc3;
-      box-shadow: 0px 0px 500px 250px rgba(89, 23, 147, 0.4), -100px -100px 250px 100px rgba(204, 25, 120, 0.7),
-        -100px 100px 500px 250px rgba(80, 30, 40, 0.7), 50px -50px 500px 250px rgba(59, 25, 170, 0.7);
+      background-color: $purp;
+      // box-shadow: 0px 0px 500px 250px rgba(89, 23, 147, 0.4), -100px -100px 250px 100px rgba(204, 25, 120, 0.7),
+      //   -100px 100px 500px 250px rgba(80, 30, 40, 0.7), 50px -50px 500px 250px rgba(59, 25, 170, 0.7);
+      box-shadow: $shadow;
     }
     .Main_text {
       @apply relative;

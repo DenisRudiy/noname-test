@@ -22,30 +22,135 @@ body {
   font-family: $ff;
   margin: 0;
   padding: 0;
-  background-color: var(--black);
-  color: rgb(255, 255, 255);
+  background-color: $black;
+  color: $white;
   overflow-y: scroll;
   overflow-x: hidden !important;
 
-  background: rgb(115, 25, 74);
-  background: linear-gradient(
-    45deg,
-    rgba(115, 25, 74, 1) 2%,
-    rgba(5, 1, 13, 1) 31%,
-    rgba(64, 7, 37, 1) 70%,
-    rgba(37, 1, 21, 1) 90%
-  );
+  background: $bg;
+  background: $gradPink;
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }
 
 *::-webkit-scrollbar {
   width: 0.65rem;
-  background-color: #7b7b7b;
+  background-color: $darkGrey;
 }
 *::-webkit-scrollbar-thumb {
-  border-radius: $radiusSmall;
-  background-color: #d8d8d8;
+  border-radius: $radiusSmall 0 $radiusSmall 0;
+  background-color: $primary;
+}
+
+.call-btn {
+  position: fixed;
+  right: calc(1vh + 2vw);
+  bottom: calc(1vh + 2vw);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: $transition;
+  z-index: 50;
+  padding: 15px;
+  background: rgba(14, 15, 14, .5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  transition: .3s ease-in-out;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border: 1px solid #fff;
+    border-radius: 50%;
+    animation: pulse__2 2.5s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(90,153,212,.5);
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    right: -11px;
+    bottom: -11px;
+    margin: 8px;
+    border-radius: 50%;
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 4px;
+    animation: lds-dual-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;
+    
+  }
+
+  &>svg {
+    vertical-align: middle;
+
+    &.PhoneSVGContainer {
+      // bottom: calc(50% - (1vh + 1vw));
+      // right: calc(1vh + 1vw);
+      height: 40px;
+      width: 40px;
+
+      &.iconContainerMenu {
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    &>g.phone__path {
+      stroke: #fff;
+    }
+
+    &>path {
+
+      &.PhoneSVG {
+        stroke-width: 12;
+        animation: phoneSvg 6s linear forwards;
+
+        &.iconSVG {
+          stroke-dashoffset: 500%;
+          stroke-dasharray: 500%;
+          stroke-linejoin: round;
+          fill: none;
+        }
+      }
+    }
+  }
+}
+@keyframes pulse__2 {
+  0% {
+    transform: scale(.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90,153,212,0);
+  }
+  100% {
+    transform: scale(.9);
+    box-shadow: 0 0 0 0 rgba(90,153,212,0);
+  }
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+@keyframes phoneSvg {
+  0% {
+    stroke-dashoffset: 500%;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes gradient {
