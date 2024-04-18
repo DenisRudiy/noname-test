@@ -1,12 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { modalEnterAnimation } from "../services/titleAnimationService";
 import "../styles/Header.scss";
+// import LanguageSelector from "../components/UI/languageSelector";
+import LanguageSelector from "./UI/LanguageSelector";
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [modal, setModal] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const isMobile = windowWidth <= 1240;
   const modalRef = useRef<HTMLHeadingElement | null>(null);
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -67,19 +72,19 @@ const Header = () => {
             </div>
             <div className="header-modal__nav">
               <div className="header-nav__item" onClick={scrollToHome}>
-                Home
+                {t("home")}
               </div>
               <div className="header-nav__item" onClick={scrollToAbout}>
-                Services
+                {t("services")}
               </div>
               <div className="header-nav__item" onClick={scrollToCases}>
-                Cases
+                {t("cases")}
               </div>
               <div className="header-nav__item" onClick={scrollToFeedback}>
-                Feedback
+                {t("feedback")}
               </div>
               <div className="header-nav__item" onClick={scrollToFooter}>
-                Contacts
+                {t("contacts")}
               </div>
             </div>
           </div>
@@ -95,6 +100,16 @@ const Header = () => {
             <img src="https://i.postimg.cc/sxXCsDhT/noname-logo.png" alt="" className="header-logo__img" loading="lazy" />
             <h1 className="header-logo__title">ABC Digital</h1>
           </div>
+
+
+          <div className="header__language dropdown">
+            <button className="dropbtn">{t("switcher")}</button>
+            <div className="dropdown__content">
+                <LanguageSelector i18n={i18n} />
+            </div>
+          </div>
+
+
           <button onClick={showModal} className="header-burger__btn">
             <img
               width="25"
@@ -114,22 +129,32 @@ const Header = () => {
           <div className="header-nav__section">
             <div className="header-nav">
               <div className="header-nav__item" onClick={scrollToHome}>
-                Home
+                {t("home")}
               </div>
               <div className="header-nav__item" onClick={scrollToAbout}>
-                Services
+                {t("services")}
               </div>
               <div className="header-nav__item" onClick={scrollToCases}>
-                Cases
+                {t("cases")}
               </div>
               <div className="header-nav__item" onClick={scrollToFeedback}>
-                Feedback
+                {t("feedback")}
               </div>
               <div className="header-nav__item" onClick={scrollToFooter}>
-                Contacts
+                {t("contacts")}
               </div>
             </div>
           </div>
+
+
+          <div className="header__language dropdown">
+            <button className="dropbtn">{t("switcher")}</button>
+            <div className="dropdown__content">
+                <LanguageSelector i18n={i18n} />
+            </div>
+          </div>
+
+
         </div>
       )}
     </div>

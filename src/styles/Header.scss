@@ -2,6 +2,18 @@
 @import "/src/styles/utils/style.scss";
 
 .header {
+  &__language {
+    position: relative;
+    align-items: center;
+    gap: 3rem;
+    &>button {
+        @include text($ff, 700, 14rem, 19rem, $white);
+    }
+
+    &:hover {
+        display: block;
+    }
+  }
 }
 .modal {
     position: fixed;

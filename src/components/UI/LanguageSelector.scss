@@ -1,0 +1,58 @@
+@import '../../styles/utils/vars';
+@import '../../styles/utils/mixins';
+
+.dropdown {
+    &__content {
+        display: none;
+        position: absolute;
+        background: $black;
+        border-radius: $radiusSmall;
+        width: 200rem;
+        height: auto;
+
+        & button {
+            cursor: pointer;
+            padding: 12rem 16rem;
+            text-decoration: none;
+            display: inline-block;
+            background-color: transparent;
+            @include text($ff, 500, 18rem, 26rem, $white);
+            text-transform: uppercase;
+            transition-property: transform;
+            transition: $transition;
+
+            &::after {
+                content: '';
+                border-top: 2rem solid $primary;
+                width: 80%;
+                position: absolute;
+                display: block;
+                transform: rotateY(90deg);
+                transition:transform 0.25s linear;
+            }
+
+            &:hover {
+                transform: scale(1);
+            }
+            &:hover::after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+.dropbtn {
+    background-color: transparent;
+    color: $white;
+    padding: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.dropdown:hover .dropdown__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+    padding: 24rem 12rem 24rem 4rem;
+}
