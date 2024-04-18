@@ -14,27 +14,55 @@
   --dark_grey: #0b0815;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
+  font-size: 1px;
+  // margin-inline: auto;
+  overflow-x: hidden;
+  @include tablet {
+      font-size: 0.9px;
+  }
+  @include tablet-small {
+      font-size: 0.8px;
+  }
+  @include mobile {
+      font-size: 0.7px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: $ff;
   margin: 0;
   padding: 0;
+  font-size: 10rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: $black;
   color: $white;
-  overflow-y: scroll;
-  overflow-x: hidden !important;
-
   background: $bg;
-  background: $gradPink;
-  background-size: 400% 400%;
+  // background: $gradPink;
   animation: gradient 2s ease infinite;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 *::-webkit-scrollbar {
-  width: 0.65rem;
+  width: 10rem;
   background-color: $darkGrey;
 }
 *::-webkit-scrollbar-thumb {
